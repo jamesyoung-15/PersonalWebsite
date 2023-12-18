@@ -1,4 +1,6 @@
 
+@import url("catppuccin.css");
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     --header-height: 3.5rem;
@@ -12,9 +14,11 @@
 
     /* Font */
     --body-font: 'Rubik', sans-serif;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.85rem;
 
     --font-medium: 400;
     --font-semi-bold: 600;
@@ -34,13 +38,16 @@
   box-sizing: inherit;
 }
 
-html {
+/* html {
   font-size: 62.5%;
-}
+} */
 
 body {
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: var(--normal-font-size);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-weight: var(--font-medium);
 }
 
 /* My CSS Boiler Plate END */
@@ -68,40 +75,59 @@ ul{
 
 a{
     text-decoration: none;
+    color: var(--color-dark);
 }
 
 h1,h2,h3{
-    font-weight: 600;
+    font-weight: var(--font-semi-bold);
 }
 
+h1{
+  font-size: var(--h1-font-size);
+}
+
+h2{
+  font-size: var(--h2-font-size);
+}
+
+h3{
+  font-size: var(--h3-font-size);
+}
+
+
 /* Base settings END */
+
+.container{
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  /* overflow: hidden; */
+  /* background-color: aliceblue; */
+}
 
 /* Navbar START */
 
 .nav{
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 968px;
+  /* max-width: 968px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
-/* .container{
-  max-width: 968px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  background-color: aliceblue;
-} */
 
 .header{
   width: 100%;
   background-color: var(--color-light);
-  /* position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 100; */
+  z-index: 100;
+}
+
+.header a{
+  color: var(--color-dark);
 }
 
 .nav{
@@ -109,13 +135,25 @@ h1,h2,h3{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 50px;
+  column-gap: 3rem;
 }
 
 .nav-logo{
-  font-size: 1.7rem;
-  font-weight: 600;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
   letter-spacing: 0.125rem;
+  position: relative;
+}
+
+.nav-logo::after{
+  position: absolute;
+  content: '';
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  top: 56%;
+  right: -0.25rem;
 }
 
 .nav-menu{
@@ -124,7 +162,7 @@ h1,h2,h3{
 
 .nav-list{
   display: flex;
-  column-gap: 50px;
+  column-gap: 3rem;
 }
 
 .nav-link{
@@ -145,6 +183,111 @@ h1,h2,h3{
 .change-theme{
   color: var(--color-dark);
   font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.nav-toggle{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-toggle{
+  display: none;
+}
+
+.active-link{
+  position: relative;
+}
+
+.active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
 }
 
 /* Navbar END */
+
+/* Home START */
+
+.home-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+.home-greeting{
+  max-width: 540px;
+  /* background-color: rebeccapurple; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-page img{
+  margin-bottom: 15px;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+.home-page h2{
+  margin-bottom: 15px;
+}
+
+.home-page .social-icons{
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons li{
+  display: inline-block;
+}
+
+.social-icons li a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+  background-color: var(--color-gray);
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.social-icons li a i{
+  color: #fff;
+}
+
+.social-icons li a:hover{
+  background-color: var(--color-dark);
+}
+
+.resume-button{
+  background-color: var(--color-primary);
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.25rem;
+  vertical-align: middle;
+}
+
+.resume-button:hover{
+  background-color: var(--color-dark);
+}
+
+.resume-button a{
+  color: #fff;
+}
+
+/* Home END */
+
+/* About START */
+
+/* About END */

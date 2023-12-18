@@ -1,0 +1,7 @@
+services:
+  client:
+    image: nginx
+    ports:
+      - 3013:80
+    volumes:
+      - ./:/usr/share/nginx/html
