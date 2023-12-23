@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James' Portfolio</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2e277278ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -14,27 +16,27 @@
             <a href="#" class="nav-logo">
                 <h2>James</h2>
             </a>
-            <section class="nav-menu">
+            <section class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-list-items">
+                    <!-- <li class="nav-list-items">
                         <a href="#home" class="nav-link active-link">Home</a>
+                    </li> -->
+                    <li class="nav-list-items">
+                        <a href="#home-section" class="nav-link active-link">About</a>
                     </li>
                     <li class="nav-list-items">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-list-items">
-                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#portfolio-section" class="nav-link">Projects</a>
                     </li>
                     <li class="nav-list-items">
                         <a href="#experience" class="nav-link">Experience</a>
                     </li>
-                    <li class="nav-list-items">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
                 </ul>
+                <div class="nav-close" id="nav-close">
+                    <i class="lni lni-close"></i>
+                </div>
             </section>
             <section class="nav-btns">
-                <i class="lni lni-sun change-theme"></i>
+                <!-- <i class="lni lni-sun change-theme"></i> -->
                 <div class="nav-toggle" id="nav-toggle">
                     <i class="lni lni-grid-alt"></i>
                 </div>
@@ -45,30 +47,236 @@
     <!-- Main Page -->
     <main>
         <!-- Home -->
-        <section class="home-page" id="home-page">
+        <section class="home-section" id="home-section">
             <div class="container">
                 <div class="home-greeting">
                     <img src="./images/portfolio1.png" alt="James">
                     <h2>James Young</h2>
-                    <span>Hello! I'm an electronic engineering student at HKUST.</span>
-                    <span>I have a passion for software development, embedded systems, and system administration.</span>
+                    <div class="home-about">
+                        <span>Hello! I'm an electronic engineering student at HKUST with a passion for software development, embedded systems, and Linux system administration.</span>
+                    </div>
                     <ul class="social-icons">
-                        <li><a href="" target="_blank"><i class="lni lni-github-original"></i></a></li>
-                        <li><a href="" target="_blank"><i class="lni lni-linkedin-original"></i></a></li>
-                        <li><a href="" target="_blank"><i class="lni lni-envelope"></i></a></li>
+                        <li><a href="https://github.com/jamesyoung-15/" target="_blank"><i class="lni lni-github-original"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jamesyyoung/" target="_blank"><i class="lni lni-linkedin-original"></i></a></li>
+                        <li><a href="mailto:jyyoungdev@proton.me" target="_blank"><i class="lni lni-envelope"></i></a></li>
                     </ul>
                     <div class="resume-button">
-                        <a href="">Resume <i class="lni lni-pencil-alt"></i></a>
+                        <a href="#" target="_blank">Resume <i class="lni lni-pencil-alt"></i></a>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- About -->
+        <!-- <section class="about section">
+            <div class="container">
+                <h2 class="section-title padd-15">About Me</h2>
+                <div class="row">
+                    <div class="about-img padd-15">
+                        <img src="./images/portfolio1.png" alt="" srcset="">
+                    </div>
+                    <div class="about-content padd-15">
+                        <div class="row">
+                            <div class="about-text">
+                                <p>Hi! My name is James and I am currently a final year undergraduate electronic engineering student at The Hong Kong University of Science and Technology. 
+                                    I have a passion for software development, embedded systems, and Linux administration.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Projects -->
+        <section class="portfolio section" id="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">Personal Projects</h2>
+                <!-- <div class="row">
+                    <div class="portfolio-filter">
+                        <div class="portfolio-filter-inner">
+                            <button type="button" class="active">Highlighted</button>
+                            <button type="button">Software Development</button>
+                            <button type="button">Embedded Systems/Robotics</button>
+                            <button type="button">IT/Linux System Admin</button>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="./images/airQualityDashboard.png" alt="Project">
+                                <div class="mask"></div>
+                            </div>
+                            <span class="portfolio-item-tag">Software</span>
+                            <h3 class="portfolio-item-title">Full Stack Air Quality Dashboard</h3>
+                            <p class="portfolio-item-description">A full-stack project that stores and displays air quality sensor data from my home. Backend uses DynamoDB connected through AWS API Gateway and AWS Lambda. 
+                                Front-end displays calls API and displays data using HTML, CSS, and JS. 
+                            </p>
+                            <div class="portfolio-item-links">
+                                <a href="https://github.com/jamesyoung-15/IoT-Home-Sensor-Dashboard" target="_blank"><i class="lni lni-github-original"></i></a>
+                                <a href="https://airqualitydashboard.jyylab.com" target="_blank"><i class="lni lni-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="./images/stm32CourseRobot.jpg" alt="Project">
+                                <div class="mask"></div>
+                            </div>
+                            <span class="portfolio-item-tag">Embedded Systems</span>
+                            <h3 class="portfolio-item-title">STM32 Mini-Robot Cleaner</h3>
+                            <p class="portfolio-item-description">An STM32 robot with wireless control via UDP and automatic navigation mode with obstacle avoidance using bubble rebound algorithm.</p>
+                            <div class="portfolio-item-links">
+                                <a href="https://github.com/jamesyoung-15/Mini-Robot-Cleaner" target="_blank"><i class="lni lni-github-original"></i></a>
+                                <a href="https://youtu.be/z4BqyFa29B0" target="_blank"><i class="lni lni-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="./images/todoscreenshot.png" alt="Project">
+                                <div class="mask"></div>
+                            </div>
+                            <span class="portfolio-item-tag">Software</span>
+                            <h3 class="portfolio-item-title">Todo List</h3>
+                            <p class="portfolio-item-description">A simple Django to-do list with user authentication and CRUD operations. Containerized application with Docker and deployed on AWS EC2 instance.</p>
+                            <div class="portfolio-item-links">
+                                <a href="https://github.com/jamesyoung-15/Todo-List-Django" target="_blank"><i class="lni lni-github-original"></i></a>
+                                <a href="https://todo.jamesyy.info/" target="_blank"><i class="lni lni-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="./images/ttc-minimax.jpg" alt="Project">
+                                <div class="mask"></div>
+                            </div>
+                            <span class="portfolio-item-tag">Software</span>
+                            <h3 class="portfolio-item-title">Tic-Tac-Toe w/ Mini-max Algorithm</h3>
+                            <p class="portfolio-item-description">A simple Tic-Tac-Toe game written in C++ that allows users to play against an AI that uses the mini-max algorithm to find the best possible move. Written in C++.</p>
+                            <div class="portfolio-item-links">
+                                <a href="https://github.com/jamesyoung-15/Tic-Tac-Toe-Minimax" target="_blank"><i class="lni lni-github-original"></i></a>
+                                <!-- <a href="#" target="_blank"><i class="lni lni-link"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="./images/mariokart64.png" alt="Project">
+                                <div class="mask"></div>
+                            </div>
+                            <span class="portfolio-item-tag">Machine Learning</span>
+                            <h3 class="portfolio-item-title">DeepQL Kart64</h3>
+                            <p class="portfolio-item-description">
+                                An on-going project that attempts to use Deep Q-Learning to play Mario Kart 64. Using Mupen64plus as emulator wrapped with my own custom Farama Gymnasium environment. Neural network model written in Pytorch.
 
+                            </p>
+                            <div class="portfolio-item-links">
+                                <a href="https://github.com/jamesyoung-15/DeepQLKart64" target="_blank"><i class="lni lni-github-original"></i></a>
+                                <!-- <a href="#" target="_blank"><i class="lni lni-link"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="./images/HomeNetwork.drawio.png" alt="Project">
+                                <div class="mask"></div>
+                            </div>
+                            <span class="portfolio-item-tag">System Admin</span>
+                            <h3 class="portfolio-item-title">Home Server</h3>
+                            <p class="portfolio-item-description">My home lab/server where I self-host various applications such as my own websites, applications such as Nextcloud (cloud storage), NAS, and so on. 
+                                Main server running Proxmox with various Linux VMs and LXCs.
+                            </p>
+                            <div class="portfolio-item-links">
+                                <a href="https://github.com/jamesyoung-15/HomeServer" target="_blank"><i class="lni lni-github-original"></i></a>
+                                <!-- <a href="#" target="_blank"><i class="lni lni-link"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Work -->
+        <section class="section" id="experience">
+            <div class="container">
+                <h2 class="section-title padd-15">Work Experience</h2>
+                <div class="row">
+                    <div class="education">
+                    </div>
+                    <div class="work-experience">
+                        <div class="row">
+                            <div class="timeline-box">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <!-- <i class="lni lni-briefcase-alt timeline-icon"></i> -->
+                                        <i class="fa-solid fa-briefcase timeline-icon"></i>
+                                        <h3 class="timeline-title">Software Developer Intern</h3>
+                                        <h3 class="timeline-date">
+                                            <i class="lni lni-calendar"></i> December 2023 - Feburary 2024
+                                        </h3>
+                                        <h3 class="timeline-location">
+                                            <i class="lni lni-map-marker"></i> Intelligent Design Technology Limited, Hong Kong
+                                        </h3>
+                                        <p>Current job, work in-progress.</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <!-- <i class="lni lni-briefcase-alt timeline-icon"></i> -->
+                                        <i class="fa-solid fa-briefcase timeline-icon"></i>
+                                        <h3 class="timeline-title">Electronic Engineering Intern</h3>
+                                        <h3 class="timeline-date">
+                                            <i class="lni lni-calendar"></i> August 2023
+                                        </h3>
+                                        <a href="" target="_blank">
+                                            <h3 class="timeline-location">
+                                                <i class="lni lni-map-marker"></i> Kolour Think Tank, Hong Kong
+                                            </h3>
+                                        </a>
+                                        <p>Developed project that takes images of a digital utility meter with ESP32-CAM, reads the meter reading with AWS Rekognition, and stores the data in AWS DynamoDB.</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <!-- <i class="lni lni-briefcase-alt timeline-icon"></i> -->
+                                        <i class="fa-solid fa-briefcase timeline-icon"></i>
+                                        <h3 class="timeline-title">Internet of Things Intern</h3>
+                                        <h3 class="timeline-date">
+                                            <i class="lni lni-calendar"></i> December 2022 - May 2023
+                                        </h3>
+                                        <h3 class="timeline-location">
+                                            <i class="lni lni-map-marker"></i> Graphite Venture Limited, Hong Kong
+                                        </h3>
+                                        <p>Worked on reading and sending water sensor data to AWS IoT core with an ESP32 module through MQTT.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
-
+        <section class="footer-section">
+            <div class="footer-info">
+                <span>Portfolio Website by James Young</span>
+                <span><a href="">Built with HTML, CSS, JS</a></span>
+            </div>
+            <div class="footer-icons">
+                <a href=""><i class="lni lni-github-original"></i></a>
+                <a href=""><i class="lni lni-linkedin-original"></i></a>
+                <a href=""><i class="lni lni-envelope"></i></a>
+            </div>
+        </section>
     </footer>
+
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
