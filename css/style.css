@@ -503,7 +503,7 @@ h3{
   align-items: center;
   column-gap: 20px;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 1.25rem;
   opacity: 0;
   transition: 0.3s;
