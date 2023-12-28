@@ -5,3 +5,4 @@ services:
       - 3013:80
     volumes:
       - ./:/usr/share/nginx/html
+    restart: always
