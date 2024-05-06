@@ -719,11 +719,19 @@ footer{
     height: 300px;
     transition: 0.2s;
   }
+  .portfolio-item-description{
+    top: 35%;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .container{
     max-width: 568px;
+  }
+  .portfolio-item{
+    flex: 0 0 100%;
+    max-width: 550px;
+    margin: 0 auto 40px;
   }
 }
 
