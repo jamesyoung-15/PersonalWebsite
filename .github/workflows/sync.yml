@@ -1,13 +1,9 @@
 name: Sync Static Website to S3
 
 on:
-  push:
-    branches:
-    - main
-    paths:
-        - src/**'
-  repository_dispatch:
-    types: [eslint]
+    push:
+        branches:
+        - main
 
 jobs:
   deploy:
