@@ -4,8 +4,8 @@ on:
   push:
     branches:
     - master
-  path:
-    - src/**
+    paths:
+        - src/**
 
 jobs:
     eslint:
