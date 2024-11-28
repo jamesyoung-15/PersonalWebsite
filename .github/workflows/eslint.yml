@@ -1,0 +1,24 @@
+name: ESLint
+
+on:
+  push:
+    branches:
+    - master
+  path:
+    - src/**
+
+jobs:
+    eslint:
+        name: ESLint
+        runs-on: self-hosted
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 20
+            - uses: sibiraj-s/action-eslint@v3
+              with:
+                eslint-args: '--ignore-path=.gitignore --quiet'
+                extensions: 'js,jsx,ts,tsx'
+                annotations: true
