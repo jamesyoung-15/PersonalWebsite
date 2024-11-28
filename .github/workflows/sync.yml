@@ -6,6 +6,8 @@ on:
     - main
     paths:
         - src/**'
+  repository_dispatch:
+    types: [eslint]
 
 jobs:
   deploy:

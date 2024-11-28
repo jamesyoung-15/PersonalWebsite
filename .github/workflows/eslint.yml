@@ -14,11 +14,9 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
+            - name: Use Node.js
+              uses: actions/setup-node@v4
               with:
                 node-version: 20
-            - uses: sibiraj-s/action-eslint@v3
-              with:
-                eslint-args: '--ignore-path=.gitignore --quiet'
-                extensions: 'js,jsx,ts,tsx'
-                annotations: true
+            - run: cd src && npm ci
+            - run: npx eslint .
