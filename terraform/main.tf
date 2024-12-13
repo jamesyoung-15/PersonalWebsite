@@ -1,27 +1,3 @@
-terraform {
-  required_providers {
-    cloudflare = {
-      source  = "cloudflare/cloudflare"
-      version = ">= 4.29"
-    }
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 5.4"
-    }
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
-  profile = var.aws_profile
-}
-
-provider "cloudflare" {
-  api_token = var.cloudflare_api_token
-}
-
-
-
 resource "aws_s3_bucket" "site_bucket" {
   bucket = "${var.subdomain_website}.${var.site_domain}"
 }
